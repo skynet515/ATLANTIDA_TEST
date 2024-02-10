@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-4">
+        <div class="container-xl px-4">
+            <div class="page-header-content pt-3">
+                <div class="row align-items-center justify-content-between">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto mt-4">
+                            <h1 class="page-header-title">
+                                Transacciones Tarjeta.
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="container col-12">
+            <div class=" card">
+                <div class="card-body">
+                    <div class="form-body">
+                        <div class="row ml-2">
+                            <div class="col-md-6">
+                                <label class="large mb-1" for="slcGrado">Tarjeta: </label>
+                                <select class="form-control selectSearch" id="slcTarjeta">
+                                    <option selected disabled>--Seleccione--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr />
+                        <form>
+                            <div class="row">
+                                <div class="col-md-2 float-right">
+                                    <button class="btn btn-success float-right" type="button"><i class="fas fa-file-excel"></i> Exportar Excel</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="card mb-auto mt-2">
+                        <div class="card-header">Listado de Transacciones</div>
+                        <div class="card-body p-2">
+                            <!--Tabla-->
+                            <div class="datatable" style="padding-top: 20px">
+                                <table class="table table-bordered table-hover" width="100%" id="tblTransaccionesMensuales">
+                                    <thead>
+                                        <tr>
+                                            <th>Tipo Transacción</th>
+                                            <th>Fecha Transacción</th>
+                                            <th>Descripción</th>
+                                            <th>Monto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblTransaccionesMensuales">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@Scripts.Render("~/Content/TransaccionesMensuales")
+

@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-4">
+        <div class="container-xl px-4">
+            <div class="page-header-content pt-1">
+                <div class="row align-items-center justify-content-between">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto mt-4">
+                            <h1 class="page-header-title">
+                                Estado de Cuenta
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row">
+        <div class="container col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            Datos del Titular.
+                        </div>
+                        <div class="card-body">
+                            <div class="row ml-2">
+                                <div class="col-md-6">
+                                    <label class="large mb-1" for="slcGrado">Tarjeta: </label>
+                                    <select class="form-control selectSearch" id="slcTarjeta">
+                                        <option selected disabled>--Seleccione--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row ml-2">
+                                <div class="col-md-6">
+                                    <img src="~/Content/src/img/tarjeta-de-credito.png" alt="Alternate Text" style="max-width: 50%; height: auto;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label id="lblTitular" class="large mb-1 fw-bold"></label>
+                                </div>
+                                <div class="col-md-5">
+                                    <label id="lblTarjeta" class="large mb-1 fw-bold"></label>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+                                    <label id="lblSaldo" class="large mb-1 fw-bold"></label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label id="lblLimiteCrediticio" class="large mb-1 fw-bold"></label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label id="lblSaldoDisponible" class="large mb-1 fw-bold"></label>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row">
+                                <div class="col-md-2 float-left">
+                                    <button class="btn btn-success mb-2" type="button"><i class="fas fa-file-excel"></i> Exportar Excel</button>
+                                </div>
+                            </div>
+
+                            <div class="card mb-auto mt-2">
+                                <div class="card-header">Compras Realizadas</div>
+                                <div class="card-body p-2">
+                                    <!--Tabla-->
+                                    <div class="datatable" style="padding-top: 20px">
+                                        <table class="table table-bordered table-hover" width="100%" id="tblComprasMensuales">
+                                            <thead>
+                                                <tr>
+                                                    <th>Fecha Transacción</th>
+                                                    <th>Descripción</th>
+                                                    <th>Monto</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbComprasMensuales">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+                                    <label class="large mb-1 fw-bold">Total compras mes: $300 </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="large mb-1 fw-bold">Total compras mes anterior: $3000 </label>
+                                </div>
+                            </div>
+                            <hr />
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@Scripts.Render("~/Content/Tarjeta")
+
